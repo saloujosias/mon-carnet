@@ -1,0 +1,149 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #60a5fa;
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #111;
+  --muted: #6b7280;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-bottom: 4px solid var(--secondary);
+}
+
+header h1 { font-size: 30px; margin-bottom: 10px; font-weight: 700; }
+header p { font-size: 16px; color: #e0e7ff; margin-bottom: 12px; }
+
+nav { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; transition: transform 0.2s; }
+nav a:hover { text-decoration: underline; transform: scale(1.1); }
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main { flex: 3; min-width: 300px; }
+aside { flex: 1; min-width: 250px; }
+
+/* CARD */
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.skills .skill { margin-bottom: 12px; text-align: left; }
+.skill-name { display: flex; justify-content: space-between; font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+.bar { height: 10px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--secondary); border-radius: 999px; }
+
+/* EXPERIENCE */
+.timeline { padding-left: 0; text-align: left; display: flex; flex-direction: column; gap: 15px; }
+
+.experience-card {
+  background: #f9fafb;
+  border-left: 4px solid var(--primary);
+  padding: 12px 16px;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.experience-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.experience-card .meta { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.experience-card .details {
+  display: none;
+  background: #e0f2fe;
+  border-left: 3px solid var(--secondary);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* PROJECTS */
+.projects-grid { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; }
+.project { min-width: 200px; flex: 0 0 auto; padding: 12px; border-radius: 10px; background: linear-gradient(180deg, #fff, #f0f9ff); border: 1px solid rgba(29,78,216,0.2); text-align: left; }
+.project h5 { margin: 0 0 6px; }
+.project p { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* PHOTO */
+.profile-photo { width: 100%; border-radius: 10px; object-fit: cover; }
+
+/* BÉNÉVOLAT */
+#volunteer { background: #fefce8; border-left: 4px solid #facc15; padding: 18px; text-align: left; }
+
+/* CONTACT BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover { transform: scale(1.05); background: var(--secondary); }
+
+/* FOOTER */
+footer { background: #1e293b; color: #fff; text-align: center; padding: 14px 20px; margin-top: 30px; border-top: 4px solid var(--primary); }
+
+/* BOUTON RETOUR EN HAUT */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+#scrollTopBtn:hover { background: var(--secondary); transform: scale(1.1); }
